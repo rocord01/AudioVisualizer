@@ -7,6 +7,7 @@ I wanted to use the Web Audio API, so made this music visualizer. This is not co
 
 ## Update Changelist
 <pre>
-v1.1 (CURRENT): Added fullscreen button
+v1.2 (CURRENT): Fixed some issues with the buttons being too large on some devices 
+v1.1: Added fullscreen button
 v1.0: Uploaded to GitHub
 </pre>
