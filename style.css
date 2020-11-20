@@ -68,7 +68,7 @@ label.file{
   transform: translate3d(-50%, -50%, 0);
   padding: 1rem 2rem;
   border-radius: 4px;
-  
+
   background: var(--paperColor);
   color: var(--textColor);
   font-size: 1.25em;
@@ -107,9 +107,46 @@ label.file.normal{
   display: inline-block;
   font-size: 16px;
   font-family: 'Saira', sans-serif;
-    
+
   cursor: pointer;
 }
 .button:hover{
     background: var(--darkfscrn);
+}
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (max-width: 768px) {
+  .block {
+    display: none;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {}
+
+.block {
+  position: absolute;
+  width: 350px;
+  margin-bottom: 0;
 }
