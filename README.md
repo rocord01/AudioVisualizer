@@ -1,7 +1,7 @@
 # Audio Visualizer based on Three.js
 ### By RoCord
 
-I wanted to use the Web Audio API, so made this music visualizer. The basic idea came from a pen I found here on codepen itself ( will link to it as soon as I find it ).
+I wanted to use the Web Audio API, so made this music visualizer. This is not compatible with mobile devices (Phone, Tablet, etc.)
 
 > **How to use:** Just upload any mp3 file and watch the bubble do weird things!
 
