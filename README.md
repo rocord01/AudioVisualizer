@@ -6,5 +6,7 @@ I wanted to use the Web Audio API, so made this music visualizer. The basic idea
 > **How to use:** Just upload any mp3 file and watch the bubble do weird things!
 
 ## Update Changelist
-**v1.1 (CURRENT)**: Added fullscreen button
-**v1.0**: Uploaded to GitHub
+<pre>
+v1.1 (CURRENT): Added fullscreen button
+v1.0: Uploaded to GitHub
+</pre>
