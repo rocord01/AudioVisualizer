@@ -7,6 +7,7 @@
   --paperColor: hsla(242, 86%, 44%, 1);
   --paperColorDark: hsla(242, 86%, 34%, 1);
   --shadowColorFaint: hsla(0, 0%, 0%, 0.2);
+  --darkfscrn: hsla(0, 2%, 78%, 1);
 }
 
 ::selected{
@@ -94,4 +95,21 @@ label.file.normal{
   font-size: 1rem;
   top: 0;
   left: 0;
+}
+.button {
+  background-color: #635e5e /* Green */
+  border: none;
+  color: black;
+  position:fixed; left:250px; top:15px;
+  padding: 1px 32px;
+  text-decoration: none;
+  text-align: top;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Saira', sans-serif;
+    
+  cursor: pointer;
+}
+.button:hover{
+    background: var(--darkfscrn);
 }
