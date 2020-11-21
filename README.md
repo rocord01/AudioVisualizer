@@ -5,6 +5,7 @@ I wanted to use the Web Audio API, so made this music visualizer. This is not co
 
 <!-- > This version currently is has no difference from the **main** branch. -->
 > Current beta version: **1.3**.
+
 > **How to use:** Just upload any mp3 file and watch the bubble do weird things!
 
 ## Update Changelist
