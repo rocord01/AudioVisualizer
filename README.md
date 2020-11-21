@@ -9,7 +9,7 @@ I wanted to use the Web Audio API, so made this music visualizer. This is not co
 
 ## Update Changelist
 <pre>
-v1.3 (NEXT): Coming soon
+v1.3 (CURRENT BETA): Now only shows fullscreen button on audio upload
 v1.2 (CURRENT): Fixed some issues with the buttons being too large on some devices
 v1.1: Added fullscreen button
 v1.0: Uploaded to GitHub
