@@ -2,51 +2,52 @@
 
 // Fullscreen function
 function toggleFullScreen() {
-  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||
    (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-    if (document.documentElement.requestFullScreen) {  
-      document.documentElement.requestFullScreen();  
-    } else if (document.documentElement.mozRequestFullScreen) {  
-      document.documentElement.mozRequestFullScreen();  
-    } else if (document.documentElement.webkitRequestFullScreen) {  
-      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
-    }  
-  } else {  
-    if (document.cancelFullScreen) {  
-      document.cancelFullScreen();  
-    } else if (document.mozCancelFullScreen) {  
-      document.mozCancelFullScreen();  
-    } else if (document.webkitCancelFullScreen) {  
-      document.webkitCancelFullScreen();  
-    }  
-  }  
+    if (document.documentElement.requestFullScreen) {
+      document.documentElement.requestFullScreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullScreen) {
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.cancelFullScreen) {
+      document.cancelFullScreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitCancelFullScreen) {
+      document.webkitCancelFullScreen();
+    }
+  }
 }
 //initialise simplex noise instance
 var noise = new SimplexNoise();
 
 // the main visualiser function
 var vizInit = function (){
-  
+
   var file = document.getElementById("thefile");
   var audio = document.getElementById("audio");
   var fileLabel = document.querySelector("label.file");
-  
+
   document.onload = function(e){
     console.log(e);
     audio.play();
     play();
   }
   file.onchange = function(){
+    document.getElementById("fsbtn").classList.remove('hidden');
     fileLabel.classList.add('normal');
     audio.classList.add('active');
     var files = this.files;
-    
+
     audio.src = URL.createObjectURL(files[0]);
     audio.load();
     audio.play();
     play();
   }
-  
+
 function play() {
     var context = new AudioContext();
     var src = context.createMediaElementSource(audio);
@@ -74,12 +75,12 @@ function play() {
         side: THREE.DoubleSide,
         wireframe: true
     });
-    
+
     var plane = new THREE.Mesh(planeGeometry, planeMaterial);
     plane.rotation.x = -0.5 * Math.PI;
     plane.position.set(0, 30, 0);
     group.add(plane);
-    
+
     var plane2 = new THREE.Mesh(planeGeometry, planeMaterial);
     plane2.rotation.x = -0.5 * Math.PI;
     plane2.position.set(0, -30, 0);
@@ -107,7 +108,7 @@ function play() {
 
     // var orbitControls = new THREE.OrbitControls(camera, renderer.domElement);
     // orbitControls.autoRotate = true;
-    
+
     scene.add(group);
 
     document.getElementById('out').appendChild(renderer.domElement);
@@ -135,7 +136,7 @@ function play() {
 
       makeRoughGround(plane, modulate(upperAvgFr, 0, 1, 0.5, 4));
       makeRoughGround(plane2, modulate(lowerMaxFr, 0, 1, 0.5, 4));
-      
+
       makeRoughBall(ball, modulate(Math.pow(lowerMaxFr, 0.8), 0, 1, 0, 8), modulate(upperAvgFr, 0, 1, 0, 4));
 
       group.rotation.y += 0.005;

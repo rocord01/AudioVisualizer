@@ -113,3 +113,6 @@ label.file.normal{
 .button:hover{
     background: var(--darkfscrn);
 }
+.hidden{
+  visibility: hidden;
+}
