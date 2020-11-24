@@ -1,4 +1,4 @@
-# Audio Visualizer based on Three.js [BETA]
+# Audio Visualizer based on Three.js
 ### By RoCord
 
 I wanted to use the Web Audio API, so made this music visualizer. This is not compatible with mobile devices (Phone, Tablet, etc.)
